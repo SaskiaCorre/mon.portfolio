@@ -7,32 +7,6 @@ import receiptPythonPoo from '../assets/screenshots/receiptPythonPoo.png';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
 
-// function Sidebar() {
-//   return (
-//     <article className="sidebar">
-//        <h2>Expérience utilisateur</h2>
-//        <h2>* *</h2>
-//        <h2>Marketing</h2>
-//        <h2>* *</h2>
-//        <h2>Communication</h2>
-//     </article>
-//   );
-// }
-
-// function MainContent(){
-//   return (
-//     <>  
-//       <main className='main-content'>
-//         <p>Mon parcours atypique m'a permis d'acquérir de l'expérience dans ces 3 domaines</p>
-//         <p>Aujourd'hui formée à la conception et au développement web, ces 3 atouts me permettent d'aborder 
-//           le marketing digital naturellement.
-//         </p>
-//         <p></p>
-//       </main>
-//     </>
-//   )
-// }
-
 const PROJECTS = [
   {
     slug: "data-analysis",
@@ -66,19 +40,30 @@ const PROJECTS = [
   },
 ]
 
+
 export default function Home() {
   return (
     <article>    
       {/* <h1>Développeuse d'applications web | Orientée Data & UX</h1> */}
 
-      <div className='hero-layout'>
-          <Sidebar />
-          <div className='main-content'>
-          <h1><Hero title={'Développeuse d\'applications web | Orientée Data & UX'} /></h1>
-            <p><Hero content={'Mon parcours atypique m\'a permis d\'acquérir de l\'expérience dans ces 3 domaines'} /></p>
-            <p><Hero content={'Aujourd\'hui formée à la conception et au développement web, ces 3 atouts me permettent d\'aborder le marketing digital naturellement.'}/></p>
+      <section className='hero-layout'>
+        <div className='sidebar'>
+          <h2><Sidebar element={'Expérience utilisateur'}/></h2>
+          <h2>* * *</h2>
+          <h2>*</h2>
+          <h2><Sidebar element={'Marketing'}/></h2>
+          <h2>* * *</h2>
+          <h2>*</h2>
+          <h2><Sidebar element={'Communication'}/></h2>
           </div>
-      </div>
+          <div className='main-content'>
+            <h1><Hero title={'Développeuse d\'applications web | Orientée Data & UX'} /></h1>
+              <div className='margin-content'>
+                <p><Hero content={'Mon parcours atypique m\'a permis d\'acquérir de l\'expérience dans ces 3 domaines'} /></p>
+                <p><Hero content={'Aujourd\'hui formée à la conception et au développement web, ces 3 atouts me permettent d\'aborder le marketing digital naturellement.'}/></p>
+              </div>
+          </div>
+      </section>
 
       <section>
        <Card projects={PROJECTS}/>

@@ -1,5 +1,5 @@
 .hero-layout {
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     display: flex;
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -9,15 +9,24 @@
 
 /* Sidebar (Gauche) */
 .sidebar {
-    border: solid 1px white;
-    padding: 3rem 10rem;
+    /* border: solid 1px white; */
+    width: 30%;
+    padding: 15rem 10rem;
+    margin-left: 5rem;
     /* border-right: 1px solid rgb(9, 78, 9);  */
 }
 
 /* Contenu Principal (Droite) */
 .main-content {
-    border: solid 1px red;
+    /* border: solid 1px red; */
     padding: 0 10rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.margin-content {
+    padding-top: 100px;
 }
 
 h1 {
@@ -27,6 +36,10 @@ h1 {
 
 h2, h3 {
     color: var(--color-primary);
+}
+
+p {
+    font-size: x-large;
 }
 
 .list {
