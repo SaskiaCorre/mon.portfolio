@@ -1,0 +1,58 @@
+import './App.css'
+import { NavLink, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import About from './pages/About';
+import ErrorPage from './pages/ErrorPage';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [ 
+      {
+      path: '/',
+      element: <Home />
+      },
+      {
+      path: '/a-propos',
+      element: <About />
+      },
+      {
+      path: '/projets',
+      element: <Projects />
+      },
+      {
+      path: '/contact',
+      element: <Contact />
+      },
+    ],
+  },
+]);
+
+function Root() {
+  return (
+    <>
+  
+    <Header />
+
+    <Outlet />
+
+    <footer>
+      <Footer />
+    </footer>
+      
+    </>
+  )
+}
+
+function App() {
+  return <RouterProvider router={router} />
+}
+
+export default App;
+

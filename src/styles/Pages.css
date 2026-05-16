@@ -1,0 +1,41 @@
+.hero-layout {
+    border: solid 1px blue;
+    display: flex;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    /* min-height: 70vh; */
+    padding: 5rem 3rem;
+}
+
+/* Sidebar (Gauche) */
+.sidebar {
+    border: solid 1px white;
+    padding: 3rem 10rem;
+    /* border-right: 1px solid rgb(9, 78, 9);  */
+}
+
+/* Contenu Principal (Droite) */
+.main-content {
+    border: solid 1px red;
+    padding: 0 10rem;
+}
+
+h1 {
+    color: var(--color-primary);
+    padding: 4rem 0 4rem 0;
+}
+
+h2, h3 {
+    color: var(--color-primary);
+}
+
+.list {
+    margin-top:2rem; 
+    margin-left: 40%;
+    padding:15px; 
+    width: 200px;
+    text-align: left;
+    align-items: flex;
+    justify-content: flex;
+    justify-items: flex-start;
+}

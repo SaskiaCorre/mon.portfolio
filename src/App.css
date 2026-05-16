@@ -1,0 +1,197 @@
+/* * {
+    box-sizing: border-box; 
+} */
+html, body, #root {
+    width: 100%;
+    margin: 0;
+}
+
+footer {
+    background: var(--bg-light);
+    height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-bg);
+}
+
+header{
+    background: var(--bg-light);
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 1rem 3rem;
+}
+
+@media (max-width: 768px) {
+    .cv-container { flex-direction: column; }
+    .sidebar, .main-content { width: 100%; }
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    margin-top: 1rem; 
+    margin-left: 10rem;
+}
+
+@media (max-width: 800px) {
+    .main-pages { flex-direction: column; }
+    .tab-droits, .topo, .autres-pages { width: 100%; }
+}
+
+/* Changer la couleur de toutes vos icônes en vert */
+.fa-solid, .fa-brands {
+    color: var(--dark-green);
+    margin-right: 8px; /* Espace entre l'icône et le texte */
+    font-size: 1.2rem;
+}
+
+/* button {
+  border: 3px solid var(--primary-green);
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+} */
+
+.link {
+  margin-right: 1rem;
+  color: black;
+  font-size: 23px;
+  padding-left: 50px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    /* flex: 1,
+      padding: '20px',
+      background: 'white',
+      borderRadius: '8px',
+      marginLeft: '20px' */
+}
+
+article {
+    background-color: rgb(11, 48, 11);
+}
+
+.nav-container {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 20px 0 0;
+    /* font-size: 15px; */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-bg);
+    font-weight: 500;
+    padding: 5px 12px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-green);
+    background: #f0f7ef;
+}
+
+
+.badge {
+    display: inline-block;
+    background: var(--primary-green);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+}
+
+
+.mission-list li::before {
+    content: "▹";
+    color: var(--primary-green);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+}
+
+/* Bouton final */
+.btn-download,
+.dropbtn {
+    display: inline-block;
+    background: var(--primary-green);
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-download:hover {
+    background: var(--dark-green);
+}
+
+/* Changer la couleur de toutes vos icônes en vert */
+.fa-solid, .far {
+    color: var(--dark-green);
+    margin-right: 10px; /* Espace entre l'icône et le texte */
+    font-size: 1.2rem;
+}
+
+/* Effet au survol sur une icône spécifique */
+.nav-link:hover .fa-circle-arrow-left {
+    transform: translateX(-5px); /* Petit mouvement vers la gauche */
+    transition: 0.3s;
+}
+
+/* Conteneur du menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Liste cachée par défaut */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    margin-top: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    list-style: none;
+    padding: 0;
+}
+
+/* Items du menu */
+.dropdown-content li a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Affichage au survol du bouton */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optionnel : effet au survol des liens */
+.dropdown-content li a:hover {
+    background-color: #f1f1f1;
+}

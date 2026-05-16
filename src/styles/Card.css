@@ -1,0 +1,37 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: var(--color-bg);
+    grid-column: 2;
+  }
+
+.card {
+    color:black;
+    width: 800px;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+.card-title {
+    color: #72cf38;
+}
+
+.card-category {
+    border-radius: 18px;
+    width: 100px;
+}
+
+.card-img {
+    width: 700px;
+}
+
+.card-description {
+    margin-top: 10px;
+}
