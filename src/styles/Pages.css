@@ -56,3 +56,36 @@ p {
     width: 250px;
     text-align: left;
 }
+
+
+/* PAGE CONTACT */
+.form {
+    background-color: var(--color-primary);
+    color: var(--color-bg); 
+    /* margin-top:2rem ; 
+    margin-left: 2rem;  */
+    padding:15px; 
+    width: 20vw;
+    border-radius: var(--radius);
+}
+
+.form-case {
+    background-color: var(--bg-light);
+    color: var(--color-bg); 
+    border-radius: var(--radius);
+    margin-top:2rem ; 
+    margin-left: 2rem; 
+    padding:15px; 
+    display: flex;
+    width: 90%;
+}
+
+.submit-button {
+    background-color: var(--bg-light);
+    color: var(--color-bg); 
+    border-radius: var(--radius);
+    margin-top:2rem ; 
+    margin-left: 2rem; 
+    padding:15px; 
+    width: 50%;
+}
