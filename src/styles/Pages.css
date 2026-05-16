@@ -19,14 +19,19 @@
 /* Contenu Principal (Droite) */
 .main-content {
     /* border: solid 1px red; */
-    padding: 0 10rem;
+    padding: 0 5rem;
     width: 70%;
     display: flex;
     flex-direction: column;
 }
 
 .margin-content {
-    padding-top: 100px;
+    padding-top: 3rem;
+    width: 60%;
+}
+
+.myImg {
+    padding-top: 10rem;
 }
 
 h1 {
@@ -43,12 +48,11 @@ p {
 }
 
 .list {
-    margin-top:2rem; 
-    margin-left: 40%;
-    padding:15px; 
-    width: 200px;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem; 
+    margin-left: 10rem;
+    padding: 15px; 
+    width: 250px;
     text-align: left;
-    align-items: flex;
-    justify-content: flex;
-    justify-items: flex-start;
 }

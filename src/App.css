@@ -6,12 +6,13 @@ html, body, #root {
     margin: 0;
 }
 
-footer {
+.footer {
     background: var(--bg-light);
-    height: 200px;
+    height: 300px;
     text-align: center;
     margin-bottom: 20px;
     color: var(--color-bg);
+    padding: 2rem;
 }
 
 header{

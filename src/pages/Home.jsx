@@ -44,9 +44,7 @@ const PROJECTS = [
 export default function Home() {
   return (
     <article>    
-      {/* <h1>Développeuse d'applications web | Orientée Data & UX</h1> */}
-
-      <section className='hero-layout'>
+     <section className='hero-layout'>
         <div className='sidebar'>
           <h2><Sidebar element={'Expérience utilisateur'}/></h2>
           <h2>* * *</h2>
@@ -58,10 +56,10 @@ export default function Home() {
           </div>
           <div className='main-content'>
             <h1><Hero title={'Développeuse d\'applications web | Orientée Data & UX'} /></h1>
-              <div className='margin-content'>
+              <main className='margin-content'>
                 <p><Hero content={'Mon parcours atypique m\'a permis d\'acquérir de l\'expérience dans ces 3 domaines'} /></p>
                 <p><Hero content={'Aujourd\'hui formée à la conception et au développement web, ces 3 atouts me permettent d\'aborder le marketing digital naturellement.'}/></p>
-              </div>
+              </main>
           </div>
       </section>
 
