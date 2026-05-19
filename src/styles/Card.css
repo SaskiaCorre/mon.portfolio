@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    background-color: var(--color-bg);
+    background-color: var(--color-text);
     grid-column: 2;
     /* width: 320px;
     min-height: 420px;

@@ -1,11 +1,12 @@
 import './App.css'
-import { NavLink, Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Outlet, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './pages/About';
 import ErrorPage from './pages/ErrorPage';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import ProjectDetails from './pages/ProjectDetails';
 import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
       path: '/projets',
       element: <Projects />
+      },
+      {
+      path: '/projects/:slug',
+      element: <ProjectDetails />
       },
       {
       path: '/contact',
@@ -50,9 +55,6 @@ function Root() {
   )
 }
 
-function App() {
+export default function App() {
   return <RouterProvider router={router} />
 }
-
-export default App;
-

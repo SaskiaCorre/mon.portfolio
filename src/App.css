@@ -7,6 +7,7 @@ html, body, #root {
 }
 
 .footer {
+    border: solid 20px yellow;
     background: var(--bg-light);
     height: 300px;
     text-align: center;
@@ -16,6 +17,7 @@ html, body, #root {
 }
 
 header{
+    border: solid 20px yellow;
     background: var(--bg-light);
     height: 180px;
     display: flex;
@@ -64,13 +66,17 @@ a:hover {
 } */
 
 .link {
-  margin-right: 1rem;
-  color: black;
-  font-size: 23px;
-  padding-left: 50px;
+    border: solid 10px grey;
+    margin-right: 1rem;
+    color: black;
+    font-size: 23px;
+    padding-left: 50px;
 }
 
 main {
+    border: solid 20px orangered;
+    background: var(--bg-light);
+    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
@@ -83,10 +89,12 @@ main {
 }
 
 article {
-    background-color: rgb(11, 48, 11);
+    border: solid 20px rgb(82, 211, 194);
+    background-color: var(--bg-light);
 }
 
 .nav-container {
+    border: solid 10px black;
     max-width: 1000px;
     display: block;
     margin: 0 auto;

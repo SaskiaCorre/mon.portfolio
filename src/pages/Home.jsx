@@ -1,47 +1,16 @@
 import '../styles/Pages.css'
 import React from 'react';
-import Card from '../components/ProjectCard';
-import graphPlotly from '../assets/screenshots/graphPlotly.png';
-import eShopHome from '../assets/screenshots/eShopHome.png';
-import receiptPythonPoo from '../assets/screenshots/receiptPythonPoo.png';
+import Card from '../components/Card';
 import Sidebar from '../components/Sidebar';
 import Hero from '../components/Hero';
+import PROJECTS from '../data/projectsData';
 
-const PROJECTS = [
-  {
-    slug: "data-analysis",
-    image: graphPlotly,
-    title: "Analyse de données de ventes",
-    stack: "Python - Pandas - Plotly",
-    category: "data",
-    description: "Graphismes interactifs",
-    github: "https://github.com/SaskiaCorre/data.analysis.graphs",
-    demo: "",
-  },
-  {
-    slug: "e-commerce",
-    image: eShopHome,
-    title: "E-commerce",
-    stack:  "PHP - Symfony - MySQL",
-    category: "web",
-    description: "Boutique en ligne avec caroussel, comptes utilisateurs et panier intéractifs, tableau de bord administrateur",
-    github: "https://github.com/SaskiaCorre/eboutique.symfony",
-    demo: "",
-  },
-  {
-    slug: "receipt-python-poo",
-    image: receiptPythonPoo,
-    title: "Data Management",
-    stack: " Python / POO",
-    category: "data",
-    description: "Ticket de caisse",
-    github: "https://github.com/SaskiaCorre/ticket.caisse.python",
-    demo: "",
-  },
-]
-
-
-export default function Home() {
+const PROJECTS_HERO = PROJECTS.filter((project) => project.isFeatured);
+  // console.log(PROJECTS_HERO);
+  // console.log(PROJECTS);
+  
+export default function Home() {  
+  
   return (
     <article>    
      <section className='hero-layout'>
@@ -64,7 +33,7 @@ export default function Home() {
       </section>
 
       <section>
-       <Card projects={PROJECTS}/>
+       <Card projects={PROJECTS_HERO}/>
       </section>
       
     </article>

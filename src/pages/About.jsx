@@ -1,15 +1,12 @@
 import '../styles/Pages.css'
 import Hero from '../components/Hero';
 import Sidebar from '../components/Sidebar';
-import imgAbout from '../assets/img/imgAbout.png';
+import imgAboutLight from '../assets/img/imgAboutLight.png';
 
 export default function About(){
     return (
     <article>
-      {/* <img src={imgAbout} alt="Ma photo de profil"></img> */}
-      <div className='myImg'>      
-      <Hero image={<img src={imgAbout} alt="Ma photo de profil"></img>} />
-      </div>
+      <Hero className='myImg' image={<img src={imgAboutLight} alt="Ma photo de profil"></img>} />
     <section className='hero-layout'>
       
             <div className='sidebar'>
