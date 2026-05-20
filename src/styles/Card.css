@@ -24,7 +24,7 @@
   }
   
 .card-title {
-    color: #72cf38;
+    color: var(--color-primary);
 }
 
 .card-category {
