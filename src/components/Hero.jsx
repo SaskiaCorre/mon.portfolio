@@ -1,11 +1,11 @@
-import '../styles/Pages.css';
-
-export default function Hero({title, content, image}){
+export default function Hero({title, subtitle, content, image, cta}){
   return (
     <>
       {title}
+      {subtitle}
       {content}
       {image}
+      {cta}
     </>
     )
 }

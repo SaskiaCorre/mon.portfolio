@@ -1,0 +1,81 @@
+/* Sidebar (Gauche) */
+.sidebar {
+    /* border: solid 5px rgb(32, 30, 30); */
+    width: 25%;
+    padding: 15rem 10rem;
+    /* border-right: 1px solid rgb(9, 78, 9);  */
+}
+
+
+/* HERO */
+.hero {
+    /* border: solid 5px rgba(239, 239, 29, 0.857); */
+    display: grid;
+    background-color: var(--bg-light);
+    color: var(--color-bg);
+    /* min-height: 70vh; */
+    padding: 5rem 3rem;
+}
+
+.hero-title {
+    font-size: var(--font-title);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: var(--font-subtitle);
+    line-height: 1.8;
+}
+
+.hero-layout {
+    /* border: solid 5px rgb(243, 82, 82); */
+    display: flex;
+    /* background-color: var(--color-text);
+    color: var(--color-bg);
+    min-height: 70vh;
+    padding: 5rem 3rem; */
+}
+
+.hero-content {
+    /* border: solid 5px rgb(0, 255, 4); */
+    width: 50%;
+    height: 100%;
+    place-self: center;
+    /* flex-direction: column; */
+    /* background-color: var(--color-text); */
+    /* color: var(--color-bg); */
+    padding: 5rem 3rem;
+}
+
+/* .hero-button {
+    border: solid 5px rgb(197, 223, 33);
+    display: flex;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    min-height: 70vh;
+    padding: 5rem 3rem;
+}  */
+
+.hero-card {
+    padding-left: 10px;
+}
+
+.hero-image {
+    /* border: solid 20px rgb(191, 45, 167); */
+    /* width: auto; */
+    /* margin-left: 20px; */
+}
+
+.list-hero {
+    /* border: solid 5px orange; */
+    place-self: center;
+    /* font-family: Arial, sans-serif; */
+    /* font-size: 1.8rem; */
+    margin-top: 1rem; 
+    /* margin-left: 10rem; */
+    padding: 15px; 
+    width: 500px;
+    text-align: left;
+}
+

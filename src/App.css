@@ -8,7 +8,7 @@ html, body, #root {
 
 .footer {
     /* border: solid 20px yellow; */
-    border-top: solid 50px var(--color-bg);
+    border-top: solid 10px var(--color-bg);
     background: var(--bg-light);
     height: 300px;
     text-align: center;
@@ -18,10 +18,10 @@ html, body, #root {
 }
 
 header{
-    /* border: solid 20px yellow; */
-    border-bottom: solid 50px var(--color-bg);
+    /* border: solid 5px yellow; */
+    border-bottom: solid 10px var(--color-bg);
     background: var(--bg-light);
-    height: 180px;
+    height: 80px;
     display: flex;
     justify-content: space-between;    
     padding: 1rem 3rem;
@@ -37,6 +37,7 @@ a:hover {
 }
 
 .logo {
+    /* border: solid 5px blue; */
     margin-top: 1rem; 
     margin-left: 10rem;
 }
@@ -74,34 +75,31 @@ a:hover {
     padding-left: 50px;
 }
 
-main {
-    border: solid 20px orangered;
+/* main {
+    border: solid 50px rgb(65, 107, 214);
     background: var(--bg-light);
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-    /* flex: 1,
-      padding: '20px',
-      background: 'white',
-      borderRadius: '8px',
-      marginLeft: '20px' */
-}
+    flex: 1;
+    border-radius: 20px;
+    margin-top: 20px,
+} */
 
 article {
-    border: solid 20px rgb(82, 211, 194);
+    /* border: solid 5px rgb(111, 116, 116); */
     background-color: var(--bg-light);
 }
 
 .nav-container {
-    border: solid 10px black;
+    /* border: solid 5px blue; */
     max-width: 1000px;
-    display: block;
     margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 120px 20px 0 0;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding: 120px 20px 0 0; */
     /* font-size: 15px; */
 }
 
@@ -122,8 +120,8 @@ article {
 
 .badge {
     display: inline-block;
-    background: var(--color-bg);
-    color: var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-text);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.8rem;

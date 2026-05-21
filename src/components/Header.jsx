@@ -8,10 +8,10 @@ export default function Header() {
       <img src={logo} className='logo' alt="logo spm"/> 
       
       <nav className='nav-container'>
-        <NavLink className="link" to={"/"}>Accueil</NavLink>
-        <NavLink className="link" to={"a-propos"}>A propos</NavLink>
-        <NavLink className="link" to={"projets"}>Projets</NavLink>
-        <NavLink className="link" to={"contact"}>Contact</NavLink>
+        <NavLink className="nav-link" to={"/"}>Accueil</NavLink>
+        <NavLink className="nav-link" to={"a-propos"}>A propos</NavLink>
+        <NavLink className="nav-link" to={"projets"}>Projets</NavLink>
+        <NavLink className="nav-link" to={"contact"}>Contact</NavLink>
       </nav>      
     </header>
   );

@@ -5,6 +5,13 @@ import receiptPythonPoo from '../assets/screenshots/receiptPythonPoo.png';
 import topologyLan from '../assets/screenshots/topologyLan.png';
 import cvEnLigne from '../assets/screenshots/cvEnLigne.png';
 
+import userAccount from '../assets/images/appSymfony/userAccount.png';
+import userAccountDetails from '../assets/images/appSymfony/userAccountDetails.png';
+import miniBasket from '../assets/images/appSymfony/miniBasket.png';
+import fullBasket from '../assets/images/appSymfony/fullBasket.png';
+import confirmOrder from '../assets/images/appSymfony/confirmOrder.png';
+
+
 const PROJECTS = [
 // Graphiques Python
   {
@@ -58,6 +65,13 @@ const PROJECTS = [
   {
     slug: "e-boutique-symfony",
     image: eShopHome,
+    imagesProject: [
+      {title: "userAccount"},
+      {title: "userAccountDetails"},
+      {title: "miniBasket"},
+      {title: "fullBasket"},
+      {title: "confirmOrder"},
+    ],
     title: "MaBoutique - E-commerce Personnalisable",
     shortStack: "PHP",
     fullStacks:  [

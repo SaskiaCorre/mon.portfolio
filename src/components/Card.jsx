@@ -6,10 +6,10 @@ import PROJECTS from '../data/projectsData';
 // Arborescence du retour : img, title, shortStack, shortDescription
 export default function Card({ projects }){
     return (
-    <article className='cards-container'>
+    <section className='cards-container'>
         {projects.map((project) => (
         <Link key={project.slug} to={`/projects/${project.slug}`} className='card-link'>
-                  
+            <div className='one-card-container'>      
                 <div className='card'>
                     <p className='card-category'
                         style={{ border: project.category === "data" ? "solid 5px lightGreen" : project.category === "web" ? "solid 5px dodgerblue" : "solid 5px green"}}
@@ -23,8 +23,9 @@ export default function Card({ projects }){
                     <h4 className='card-description'>{project.shortDescription}</h4>
                     
                 </div>
+            </div>   
         </Link>
         ))}           
-    </article>    
+    </section>    
     );
 }
