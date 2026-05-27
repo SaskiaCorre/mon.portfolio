@@ -44,12 +44,10 @@ function Root() {
     <>
   
     <Header />
-
-    <Outlet />
-
-    <footer>
+    <main>
+      <Outlet />
+    </main>
       <Footer />
-    </footer>
       
     </>
   )

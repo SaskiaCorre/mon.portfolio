@@ -5,24 +5,103 @@ import receiptPythonPoo from '../assets/screenshots/receiptPythonPoo.png';
 import topologyLan from '../assets/screenshots/topologyLan.png';
 import cvEnLigne from '../assets/screenshots/cvEnLigne.png';
 
-import userAccount from '../assets/images/appSymfony/userAccount.png';
-import userAccountDetails from '../assets/images/appSymfony/userAccountDetails.png';
-import miniBasket from '../assets/images/appSymfony/miniBasket.png';
-import fullBasket from '../assets/images/appSymfony/fullBasket.png';
-import confirmOrder from '../assets/images/appSymfony/confirmOrder.png';
+import averageCustomerSatisfaction from '../assets/images/galleries/graphsPython/averageCustomerSatisfaction.png';
+import averageDeliveryTime from '../assets/images/galleries/graphsPython/averageDeliveryTime.png';
+import monthlyRevenue from '../assets/images/galleries/graphsPython/monthlyRevenue.png';
+import productsRanking from '../assets/images/galleries/graphsPython/productsRanking.png';
+import salesByBrand from '../assets/images/galleries/graphsPython/salesByBrand.png';
+import salesByChannel from '../assets/images/galleries/graphsPython/salesByChannel.png';
+import salesByProduct from '../assets/images/galleries/graphsPython/salesByProduct.png';
+import salesByRegion from '../assets/images/galleries/graphsPython/salesByRegion.png';
+
+import confirmOrder from '../assets/images/galleries/appSymfony/confirmOrder.png';
+import dashboardAdmin from '../assets/images/galleries/appSymfony/dashboardAdmin.png';
+import userAccount from '../assets/images/galleries/appSymfony/userAccount.png';
+import userAccountDetails from '../assets/images/galleries/appSymfony/userAccountDetails.png';
+import miniShoppingCart from '../assets/images/galleries/appSymfony/miniShoppingCart.png';
+import shoppingCart from '../assets/images/galleries/appSymfony/shoppingCart.png';
 
 
 const PROJECTS = [
-// Graphiques Python
+// GRAPHIQUES PYTHON
   {
     slug: "data-analysis",
-    image: graphPlotly,
     title: "Analyse de données de ventes",
+    image: graphPlotly,
+    hero: {
+      title: "Analyse de données",
+      subtitle: "Python + Plotly",
+
+      contents: [
+         "Analyse interactive",
+         "Visualisation des ventes"
+      ],
+
+      cta: "Voir le projet"
+    },
+    gallery: [
+      {
+        title: "Note moyenne de la satisfaction client",
+        content: "",
+        objective: "", 
+        image: averageCustomerSatisfaction,
+        isInGrid: true,
+      },
+      {
+        title: "Average Delivery Time",
+        content: "",
+        objective: "",  
+        image: averageDeliveryTime,
+        isInGrid: false,
+      },
+      {
+        title: "Monthly Revenue",
+        content: "",
+        objective: "",  
+        image: monthlyRevenue,
+        isInGrid: false,
+      },
+      {
+        title: "Products Ranking", 
+        content: "",
+        objective: "", 
+        image: productsRanking,
+        isInGrid: true,
+      },
+      {
+        title: "Sales by Brand",
+        content: "",
+        objective: "",  
+        image: salesByBrand,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Channel",
+        content: "",
+        objective: "",  
+        image: salesByChannel,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Product",
+        content: "",
+        objective: "",  
+        image: salesByProduct,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Region",
+        content: "",
+        objective: "",  
+        image: salesByRegion,
+        isInGrid: true,
+      }
+    ], 
     shortStack: "Python",
     fullStacks: [
-      {title: "Python"}, 
-      {title: "Pandas"}, 
-      {title: "Plotly"}
+      {stack: "Python"}, 
+      {stack: "Pandas"}, 
+      {stack: "Plotly"}
     ],
     // fullStacks: ["Python", "Pandas", "Plotly"],
     category: "data",
@@ -60,30 +139,68 @@ const PROJECTS = [
     demo: "",
     cta: "",
     isFeatured: true,
+    isDetailled: true,
   },
-// E-boutique Symfony
+// E-BOUTIQUE SYMFONY
   {
     slug: "e-boutique-symfony",
+    title: "MaBoutique - E-commerce personnalisable",
     image: eShopHome,
-    imagesProject: [
-      {title: "userAccount"},
-      {title: "userAccountDetails"},
-      {title: "miniBasket"},
-      {title: "fullBasket"},
-      {title: "confirmOrder"},
+    gallery: [
+      {
+        title: "User Account", 
+        content: "",
+        objective: "", 
+        image: userAccount,
+        isInGrid: true,
+      },
+      {
+        title: "User Account Details", 
+        content: "",
+        objective: "", 
+        image: userAccountDetails,
+        isInGrid: false,
+      },
+      {
+        title: "Mini Basket", 
+        content: "",
+        objective: "", 
+        image: miniShoppingCart,
+        isInGrid: false,
+      },
+      {
+        title: "Full Basket", 
+        content: "",
+        objective: "", 
+        image: shoppingCart,
+        isInGrid: true,
+      },
+      {
+        title: "Confirm Order", 
+        content: "",
+        objective: "", 
+        image:confirmOrder,
+        isInGrid: false,
+      },
+      {
+        title: 'dashboardAdminAdmin',
+        content: "",
+        objective: "", 
+        image: dashboardAdmin,
+        isInGrid: true,
+      }
     ],
-    title: "MaBoutique - E-commerce Personnalisable",
     shortStack: "PHP",
-    fullStacks:  [
-      {title: "PHP"}, 
-      {title: "Symfony"}, 
-      {title: "MySQL"},
-      {title: "AJAX"}
-    ],
-    // fullStacks: ["PHP", "Symfony", "MySQL", "AJAX"],
+    fullStacks:  ["PHP", "Symfony", "MySQL", "AJAX"],
     category: "web",
     shortDescription: "Boutique e-commerce complète avec espace client, tableau de bord Administrateur, panier dynamique AJAX, paiement Stripe sécurisé.",
-    fullDescription: ``,
+    fullDescription: `Développement d'une application e-commerce complète et sécurisée sous 
+           Symfony & MySQL, pensée comme une vitrine technologique pour 
+          les artisans et commerçants.
+          De la conception de la base de données (MCD/MLD) jusqu'à l'UX dynamique 
+          (JavaScript/AJAX pour un panier sans rechargement), ce projet 
+          démontre ma capacité à livrer un produit web robuste, incluant un tunnel de paiement 
+           Stripe et un tableau de bord d'administration (EasyAdmin) intuitif.`,
     features: [  // Fonctionnalités
       {
         title: "Authentification utilisateurs",
@@ -134,16 +251,75 @@ const PROJECTS = [
     demo: "",
     cta: "Découvrir le code & l'architecture",
     isFeatured: true,
+    isDetailled: true,
   },
-// Ticket de caisse Python
+// TICKET DE CAISSE PYTHON
   {
     slug: "receipt-python-poo",
     image: receiptPythonPoo,
+    gallery: [
+      {
+        title: "Average Customer Satisfaction",
+        content: "",
+        objective: "",  
+        image: averageCustomerSatisfaction,
+        isInGrid: true,
+      },
+      {
+        title: "Average Delivery Time", 
+        content: "",
+        objective: "", 
+        image: averageDeliveryTime,
+        isInGrid: false,
+      },
+      {
+        title: "Monthly Revenue",
+        content: "",
+        objective: "",  
+        image: monthlyRevenue,
+        isInGrid: false,
+      },
+      {
+        title: "Products Ranking",
+        content: "",
+        objective: "",  
+        image: productsRanking,
+        isInGrid: true,
+      },
+      {
+        title: "Sales by Brand", 
+        content: "",
+        objective: "", 
+        image: salesByBrand,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Channel",
+        content: "",
+        objective: "",  
+        image: salesByChannel,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Product", 
+        content: "",
+        objective: "", 
+        image: salesByProduct,
+        isInGrid: false,
+      },
+      {
+        title: "Sales by Region", 
+        content: "",
+        objective: "", 
+        image: salesByRegion,
+        isInGrid: true,
+      }
+    ],
     title: "Data Management",
     shortStack: "Python",
     fullStacks: [
-      {title: "Python"},
-      {title: "POO"},
+      {stack: "Python"},
+      {stack: "POO"},
     ],
     // fullStacks: ["Python", "POO"],
     category: "data",
@@ -181,6 +357,7 @@ const PROJECTS = [
     demo: "",
     cta: "",
     isFeatured: true,
+    isDetailled: true,
   },
 // Topologie LAN
   // {

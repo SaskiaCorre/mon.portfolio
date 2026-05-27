@@ -1,5 +1,5 @@
 .cards-container {
-    /* border: solid 5px rgb(122, 53, 201); */
+    /* border: solid 1px blue; */
     display: flex;
     flex-wrap: wrap;
     gap: 10%;

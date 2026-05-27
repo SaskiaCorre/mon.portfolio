@@ -6,25 +6,25 @@ html, body, #root {
     margin: 0;
 }
 
+header{
+    /* border: solid 5px yellow; */
+    /* border-bottom: solid 10px var(--color-bg); */
+    background: var(--color-text);
+    height: 200px;
+    display: flex;
+    justify-content: space-between;    
+    padding: 1rem 3rem;
+}
+
 .footer {
     /* border: solid 20px yellow; */
-    border-top: solid 10px var(--color-bg);
-    background: var(--bg-light);
+    /* border-top: solid 10px var(--color-bg); */
+    background: var(--color-text);
     height: 300px;
     text-align: center;
     margin-bottom: 20px;
     color: var(--color-bg);
     padding: 2rem;
-}
-
-header{
-    /* border: solid 5px yellow; */
-    border-bottom: solid 10px var(--color-bg);
-    background: var(--bg-light);
-    height: 80px;
-    display: flex;
-    justify-content: space-between;    
-    padding: 1rem 3rem;
 }
 
 @media (max-width: 768px) {
@@ -99,7 +99,7 @@ article {
     margin: 0 auto;
     /* justify-content: space-between; */
     /* align-items: center; */
-    /* padding: 120px 20px 0 0; */
+    padding: 120px 20px 0 0;
     /* font-size: 15px; */
 }
 

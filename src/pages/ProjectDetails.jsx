@@ -4,6 +4,7 @@ import '../App.css'
 
 //  Hero du projet, fullDescription, fonctionnalité, challenges, img,
 // , diagramme UML, maquette Figma, GitHub, démo, compétences acquises
+
 export default function ProjectDetails(){
 const { slug } = useParams();
 
@@ -11,18 +12,19 @@ const project = PROJECTS.find(
   (p) => p.slug === slug
 );
 
-
     return(
     <>
     <ul>
       {project.fullStacks.map((fullStack) => (
-        <article key={fullStack.title}>
-         <p className='badge'>{fullStack.title}</p>
+        <article key={fullStack.stack}>
+         <p className='badge'>{fullStack.stack}</p>
         </article>
       ))}
     </ul>
+
     <h4><em>Description du projet:</em></h4>
       <p>{project.fullDescription}</p>
+
     <h4><em>Fonctionnalités:</em></h4>
       <ul>
         {project.features.map((feature) => (
@@ -32,6 +34,7 @@ const project = PROJECTS.find(
           </article>
         ))}
       </ul>
+
     <h4><em>Challenges:</em></h4>
       <ul>
         {project.challenges.map((challenge) => (
@@ -41,7 +44,6 @@ const project = PROJECTS.find(
           </article>
         ))}
       </ul>
-    <img src={project.image}  className='card-img'/>
     
     <h4><em>Diagramme UML:</em></h4>
       <ul>
@@ -53,6 +55,7 @@ const project = PROJECTS.find(
           </article>
         ))}
       </ul>
+
     <h4><em>Maquette:</em></h4>
       <ul>
         {project.models.map((model) => (
@@ -64,6 +67,7 @@ const project = PROJECTS.find(
           </article>
         ))}
       </ul>
+
     <h4><em>GitHub:</em></h4>
     <h4><em>Démo:</em></h4>
     <h4><em>Compétences acquises:</em></h4>
