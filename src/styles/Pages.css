@@ -46,15 +46,28 @@ p {
 
 .project-container {
     /* border: solid 5px green; */
-    padding: 5rem 3rem;
+    /* padding: 5rem 3rem; */
     justify-items: auto; 
 }
 
-.project-preview {
-    /* border: solid 5px orange; */
+.projects-preview {
+    border: solid 5px orange;
     padding: 5rem 3rem;
     justify-items: auto;  
 }
+ 
+.contact-preview,
+.about-preview {
+    /* border: solid 5px orange; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 3rem;
+    justify-items: auto;  
+}
+
+/* .preview-sidebar {
+    border: solid 5px blue;
+} */
 
 .grid-img {
     /* border: solid 1px green; */

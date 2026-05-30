@@ -1,4 +1,4 @@
-export default function MainContent({title, subtitle, firstcontent, secondcontent, thirdcontent, cta}){
+export default function MainContent({title, subtitle, firstcontent, secondcontent, cta}){
   return (
     <>
       <div className="page-content">

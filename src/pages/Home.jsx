@@ -9,13 +9,22 @@ import PROJECTS from '../data/projectsData';
 import imgHome from '../assets/img/imgHome.png';
 import PAGES from '../data/pagesData';
 import MainContent from '../components/MainContent';
+import { Link } from 'react-router-dom';
 
 const homePage = PAGES.home;
 
 const projectHero = PROJECTS.filter((project) => project.isFeatured);
   // console.log(projectHero);
   // console.log(PROJECTS);
-  
+
+const contactPreview = homePage.ctaTo.find(
+  (item) => item.slug === "contact"
+);
+
+const aboutPreview = homePage.ctaTo.find(
+  (item) => item.slug === "about"
+);
+
 export default function Home() {  
   
   return (
@@ -55,12 +64,45 @@ export default function Home() {
         <Card projects={projectHero}/>
       </section>
 
-      <section className='about-preview'>
-            
-      </section>
+      <section className="about-preview">
 
-      <section className='contact-preview'>
-      </section>
+
+  <MainContent
+    title={aboutPreview.title}
+    firstcontent={aboutPreview.content}
+    // img={
+    //   <img src={aboutPreview.image} alt="" />
+    // }
+    cta={
+      <Link to={aboutPreview.link}>
+        {aboutPreview.cta}
+      </Link>
+    }
+  />
+  <aside className='preview-sidebar'>
+    <RightSidebar image={
+      <img src={aboutPreview.image} alt="" />
+    } />
+  </aside>
+</section>
+
+<section className="contact-preview">
+  <MainContent
+    title={contactPreview.title}
+    firstcontent={contactPreview.content}
+    cta={
+      <Link to={contactPreview.link}>
+        {contactPreview.cta}
+      </Link>
+    }
+  />
+  <aside className='preview-sidebar'>
+          <RightSidebar image={
+              <img src={contactPreview.image} alt="" />
+              
+            } />
+        </aside>
+</section>
       
     </article>
   );

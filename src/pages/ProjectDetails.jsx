@@ -72,9 +72,29 @@ const project = PROJECTS.find(
     <h4><em>Démo:</em></h4>
     <h4><em>Compétences acquises:</em></h4>
     <p></p>
-    
-    
+        
       <p>{project.cta}</p>
+        
+{/* LA SECTION SUIVANTE FONCTIONNE */}
+    <section className="project-gallery">
+      {project.gallery.map((image) => (
+        <figure key={image.title}>
+          <img
+            src={image.image}
+            alt={image.title}
+          />
+
+          <figcaption>
+            <h3>{image.title}</h3>
+
+            {image.content && (
+              <p>{image.content}</p>
+            )}
+          </figcaption>
+        </figure>
+      ))}
+    </section>
+
     </>
     )
 }

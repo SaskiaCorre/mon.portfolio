@@ -1,6 +1,7 @@
 import dashboardAdmin from '../assets/images/galleries/appSymfony/dashboardAdmin.png';
 import imgHome from '../assets/img/imgHome.png';
 import imgAbout from '../assets/img/imgAbout.png';
+import greenPhone from '../assets/img/greenPhone.png';
 import greenPhoneSmall from '../assets/img/greenPhoneSmall.png';
 import imgPageProjects from '../assets/img/imgPageProjects.png';
 
@@ -32,21 +33,29 @@ const PAGES = {
       "Communication",
     ],
 
-    ctaToContact: {
-      title: "CTA contact",
-      content: "Les meilleurs projets naissent souvent de parcours différents. Échangeons.",
-      cta: "Aller à la page Contact",
-      link: "http://localhost:5173/contact",
-      isPreview: true
-    },   
-    
-    ctaToAbout: {
-      title: "CTA about",
-      content: "Découvrez pourquoi mon expérience dans le commerce est un atout pour concevoir des applications orientées UX & Data ",
-      cta: "Aller à la page A Propos",
-      link: "http://localhost:5173/about",
-      isPreview: true
-    },
+    cta: "Découvrir mes projets",
+
+    ctaTo: [
+  {
+    slug: "contact",
+    title: "Échangeons autour de vos besoins",
+    content:
+      "Les meilleurs projets naissent souvent de parcours différents. Échangeons.",
+    cta: "Me contacter",
+    link: "/contact",
+    image: greenPhone,
+  },
+
+  {
+    slug: "about",
+    title: "Pourquoi mon parcours est un atout",
+    content:
+      "Découvrez pourquoi mon expérience dans le commerce est un atout pour concevoir des applications orientées UX & Data.",
+    cta: "Découvrir mon parcours",
+    link: "/about",
+    image: imgAbout,
+  },
+]
   },
 
   about: {
