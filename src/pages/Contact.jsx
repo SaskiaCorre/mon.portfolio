@@ -1,4 +1,4 @@
-import '../styles/Pages.css'
+import '../styles/Contact.css'
 import LeftSidebar from '../components/LeftSidebar';
 import RightSidebar from '../components/RightSidebar';
 import React from 'react';
@@ -12,7 +12,8 @@ export default function Contact() {
   const [values, setValues] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
+    phone: "",
   });
 
   // Mise à jour des champs
@@ -27,33 +28,32 @@ export default function Contact() {
     // Traitement des données (ex. appel API)
     console.log("Données du formulaire :", values);
     // Réinitialiser le formulaire si besoin
-    setValues({ name: "", email: "", message: "" });
+    setValues({ name: "", email: "", phone: "",message: "" });
   };
 
   return (
-    <article>     
+    <article className='contact-page'>     
       <section className='page-layout'>
 
-        <aside className='left-sidebar'>
+        {/* <aside className='left-sidebar'>
           <LeftSidebar sidebar={contactPage.sidebar}/>
-        </aside>
+        </aside> */}
 
         <MainContent
           title={contactPage.title}
           subtitle={contactPage.subtitle}
+          badges={contactPage.badges}
           firstcontent={contactPage.firstcontent}
           secondcontent={contactPage.secondcontent}
         />
 
-        <aside className='right-sidebar'>          
+        {/* <aside className='right-sidebar'>          
           <RightSidebar 
             image={
               <img src={contactPage.mainImage} alt="" />
             } 
           />
-        </aside>
-            
-      </section>
+        </aside> */}
           
       <section className='form-layout'>
         <div className='form-container'>
@@ -75,8 +75,17 @@ export default function Contact() {
               name="email"
               value={values.email}
               onChange={handleChange}
-              placeholder='email'
+              placeholder='Email'
               required
+            />
+
+            <input
+              className='form-case'
+              type="text"
+              name="phone"
+              value={values.phone}
+              onChange={handleChange}
+              placeholder='N° de téléphone'              
             />
 
             <textarea
@@ -85,17 +94,18 @@ export default function Contact() {
               name="message"
               value={values.message}
               onChange={handleChange}
-              placeholder='Message'
+              placeholder="Message"
               required
             />
 
-            <button className='submit-button' type="submit">
+            <button className='submit-btn' type="submit">
               Envoyer
             </button>
 
           </form>
         </div>
           
+      </section>
       </section>
     </article>
 

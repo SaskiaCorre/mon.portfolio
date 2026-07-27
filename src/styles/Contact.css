@@ -1,0 +1,122 @@
+.contact-page {
+  width: 100%;
+}
+
+/* article { */
+    /* border: solid 5px rgb(246, 7, 194); */
+    /* background-color: var(--bg-light);
+} */
+
+.contact-page .page-layout {
+  /* border: solid 3px rgb(166, 45, 193); */
+  display: grid;
+  grid-template-columns: 70% 30%;
+  /* gap: 3rem; */
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  /* min-height: 35vh; */
+  padding: 3rem 2rem;
+  /* place-content: center;
+  place-items: center; */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contact-page .page-content {
+  /* border: solid 3px pink; */
+  /* align-self: center; */
+  padding: 1rem 6rem;
+  font-size: clamp(1.5rem, 1vw, 2rem);
+}
+
+.contact-page .page-title {
+    color: var(--bg-dark);
+    padding: 2rem 0 0 0;
+    font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.contact-page .page-subtitle {
+    color: var(--bg-dark);
+    font-size: 2.3rem;
+    padding: 2rem 0 1rem 0;
+}
+
+.contact-page .page-badges {
+  justify-self: center;
+  padding: 2rem;
+}
+
+.contact-page .badge {
+  margin-right: 1rem;
+  background-color: var(--bg-dark);
+  color:white;
+}
+
+.contact-page .page-text {
+  /* border: solid 3px blue; */
+  color: black;
+  padding: 1rem;
+}
+
+/* FORMULAIRE */
+.form-layout {
+    /* border: solid 5px orange; */
+    display: flex;
+    justify-self: center;
+  margin: 25% 25% 0 0;
+}
+
+.form-container {
+  /* border: solid 5px black; */
+  justify-content: center;  
+  width: 450px;
+  height: 460px;
+  /* text-align: left;  */
+}
+
+.form {
+  /* border: solid 5px red; */
+    background-color: var(--bg-dark);
+    color: var(--bg-dark); 
+    /* margin-top:2rem ; 
+    margin-left: 2rem;  */
+    padding:15px; 
+    width: 100%;
+    border-radius: var(--radius);
+    justify-items: center;
+}
+
+.form-case {
+    background-color: var(--bg-light);
+    border: solid 1px var(--color-bg);
+    border-radius: var(--radius);
+    margin-top:2rem ; 
+    margin-left: 2rem; 
+    padding:15px; 
+    display: flex;
+    width: 90%;
+}
+
+.submit-btn {
+    background-color: var(--bg-light);
+    border: solid 1px var(--color-bg);
+    color: var(--bg-dark); 
+    border-radius: var(--radius);
+    margin-top:2rem ; 
+    margin-left: 25%; 
+    padding:15px; 
+    width: 50%;
+    justify-content: center;
+}
+
+/* Responsive  mobile */
+@media (max-width: 768px) {
+
+}
+
+/* Responsive tablette */
+@media (max-width: 992px) {
+
+}

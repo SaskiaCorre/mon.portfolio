@@ -1,9 +1,10 @@
-import '../styles/Pages.css'
+import '../styles/Projects.css'
 import '../styles/Grid.css'
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import PROJECTS from '../data/projectsData';
+import Hero from '../components/Hero';
 import GridProject from '../components/GridProject';
 import LeftSidebar from '../components/LeftSidebar';
 import RightSidebar from '../components/RightSidebar';
@@ -26,34 +27,48 @@ import shoppingCart from '../assets/images/galleries/appSymfony/shoppingCart.png
 
 const projectsPage = PAGES.projects;
 
-
+// const Icon = projectsPage.gitIcon;
 export default function Projects({project, previewImages}) { 
 
   return (
-    <article>
-      <section className='page-projects'>
+    <article className='projects-page'>
+      <Hero
+              title={projectsPage.hero.title}
+              subtitle={projectsPage.hero.subtitle}
+              content={projectsPage.hero.content}
+              cta={
+                <Link 
+                  to={projectsPage.hero.github}
+                  className='link'
+                >
+                  {projectsPage.hero.cta}
+                </Link>
+              }
+              image={<img src={projectsPage.hero.image} alt="" />}
+            /> 
+      {/* <section className='page-projects'>
 
         <section className='page-layout'>                    
           <aside className='left-sidebar'>
             <LeftSidebar sidebar={projectsPage.sidebar}/>
-          </aside>
+          </aside> */}
           
-          <MainContent
+          {/* <MainContent
             title={projectsPage.title}
             subtitle={projectsPage.subtitle}
             firstcontent={projectsPage.firstcontent}
             secondcontent={projectsPage.secondcontent}
             cta={projectsPage.cta}
-          /> 
+          />  */}
           
-          <aside className='right-sidebar'>
+          {/* <aside className='right-sidebar'>
             <RightSidebar image={
-              <img src={projectsPage.mainImage} alt="" />
+              <img src={projectsPage.mainImage} alt=""/>
             } />
           </aside>        
-        </section>
+        </section> */}
         {/* APERÇU DES PROJETS */}
-        <section className="projects-preview">
+        <section>
           {PROJECTS.map((project) => (
             <ProjectPreview
               key={project.slug}
@@ -61,8 +76,7 @@ export default function Projects({project, previewImages}) {
             />
           ))}
         </section>
-      </section>
-
+      {/* </section> */}
     </article>    
   );
 }

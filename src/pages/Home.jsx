@@ -1,14 +1,18 @@
-import '../styles/Hero.css';
-import '../styles/Pages.css';
+// import '../styles/Hero.css';
+import '../styles/Home.css';
+import '../App.css';
+
 import React from 'react';
 import Card from '../components/Card';
+import CardXp from '../components/CardXp';
 import LeftSidebar from '../components/LeftSidebar';
 import RightSidebar from '../components/RightSidebar';
 import Hero from '../components/Hero';
 import PROJECTS from '../data/projectsData';
-import imgHome from '../assets/img/imgHome.png';
+import imgHomeSmall from '../assets/img/imgHomeSmall.png';
 import PAGES from '../data/pagesData';
 import MainContent from '../components/MainContent';
+import Experience from '../components/CardXp';
 import { Link } from 'react-router-dom';
 
 const homePage = PAGES.home;
@@ -25,85 +29,82 @@ const aboutPreview = homePage.ctaTo.find(
   (item) => item.slug === "about"
 );
 
+const goToProjects = homePage.ctaTo.find(
+  (item) => item.slug === "project"
+);
+
 export default function Home() {  
   
   return (
-    <article>
+    <article className="home-page">
       <Hero
         title={homePage.hero.title}
         subtitle={homePage.hero.subtitle}
         content={homePage.hero.content}
-        cta={<button className='hero-cta'>{homePage.hero.cta}</button>}
-        image={
-          <img src={homePage.hero.image} alt="" />              
-        }
+        cta={
+          <Link 
+            to={goToProjects.link}
+            className='link'
+          >
+            {homePage.hero.cta}
+          </Link>}
+        image={<img src={homePage.hero.image} alt="" />}
       /> 
 
-      <section className='page-layout'>
-        
-        <aside className='left-sidebar'>
-          <LeftSidebar sidebar={homePage.sidebar}/> 
+      <MainContent title={homePage.title} />
+        <section className='experience-preview'>
+          <CardXp pagesData={homePage.experiences}/>
+        </section>
+
+      <MainContent title="Mes derniers projets" /> 
+        <section className='projects-preview'>
+          <Card projects={projectHero}/>
+        </section>
+
+      <section className="about-preview">
+        <aside className='preview-sidebar'>
+          <RightSidebar image={
+            <img src={aboutPreview.image} alt="" />
+          } />
         </aside>
 
         <MainContent
-          title={homePage.title}
-          subtitle={homePage.subtitle}
-          firstcontent={homePage.firstcontent}
-          secondcontent={homePage.secondcontent}
-        />
-          
-        <aside className='right-sidebar'>
-          <RightSidebar image={
-              <img src={homePage.mainImage} alt="" />
-              
-            } />
-        </aside>
-      </section>
-        
-      <section className='projects-preview'>
-        <Card projects={projectHero}/>
+          titlebis={aboutPreview.titlebis}
+          firstcontent={aboutPreview.content}
+          // img={
+          //   <img src={aboutPreview.image} alt="" />
+          // }
+          cta={
+            <Link 
+              to={aboutPreview.link}
+              className='link'
+            >
+              {aboutPreview.cta}
+            </Link>
+          }
+        />  
       </section>
 
-      <section className="about-preview">
-
-
-  <MainContent
-    title={aboutPreview.title}
-    firstcontent={aboutPreview.content}
-    // img={
-    //   <img src={aboutPreview.image} alt="" />
-    // }
-    cta={
-      <Link to={aboutPreview.link}>
-        {aboutPreview.cta}
-      </Link>
-    }
-  />
-  <aside className='preview-sidebar'>
-    <RightSidebar image={
-      <img src={aboutPreview.image} alt="" />
-    } />
-  </aside>
-</section>
-
-<section className="contact-preview">
-  <MainContent
-    title={contactPreview.title}
-    firstcontent={contactPreview.content}
-    cta={
-      <Link to={contactPreview.link}>
-        {contactPreview.cta}
-      </Link>
-    }
-  />
-  <aside className='preview-sidebar'>
+      <section className="contact-preview">
+        <aside className='preview-sidebar'>
           <RightSidebar image={
-              <img src={contactPreview.image} alt="" />
-              
-            } />
+            <img src={contactPreview.image} alt="" />
+          } />
         </aside>
-</section>
-      
+
+        <MainContent
+          titlebis={contactPreview.titlebis}
+          firstcontent={contactPreview.content}
+          cta={
+            <Link 
+              to={contactPreview.link}
+              className='link'
+            >
+              {contactPreview.cta}
+            </Link>
+          }
+        />        
+      </section>      
     </article>
   );
 }

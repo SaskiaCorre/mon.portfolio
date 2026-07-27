@@ -1,8 +1,8 @@
 export default function LeftSidebar({sidebar}){
     return (<>
-        <ul>
+        <ul className="sidebar-items">
             {sidebar.map((item, index) => (
-                <h2 key={index}>{item}</h2>
+                <h3 key={index}>{item}</h3>
             ))}
         </ul>
         </>

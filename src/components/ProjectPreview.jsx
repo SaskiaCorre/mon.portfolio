@@ -13,7 +13,8 @@ export default function ProjectPreview({ project }) {
 
   return (
     <section className="one-project">
-      <h2>{project.title}</h2>
+      <h2 className='one-project-title'>{project.title}</h2>
+      <p className='one-project-cta'>{project.cta}</p>
 
       <GridProject
         images={previewImages}
