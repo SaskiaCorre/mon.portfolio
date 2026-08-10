@@ -1,24 +1,42 @@
 import PAGES from "../data/projectsData";
 
-export default function Diagram({projectsData}){
-    return (
-    <>
-    <div className="diagram-grid">
-        {projectsData.map((diagrams) => (
-        <div key={diagrams.title}
-             className="diagram-item"
+export default function Diagram({diagram, diagramCards}){
+  if (
+    !diagram.title && !diagram.content && 
+    !diagramCards.title && !diagramCards.image) {
+      return null;
+  }
+  return (
+    <div className="diagram">
+      {diagram.title && (
+        <h2 className="section-title">
+          {diagram.title}
+        </h2>
+      )}
+      {diagram.content && (   
+        <p className="section-description">
+          {diagram.content}
+        </p>
+      )}
+
+      <div className="diagram-grid">
+      {diagramCards.map((diagramCards) => (
+        <div 
+          key={diagramCards.title}
+          className="diagram-card"
         >
-          <h3>{diagrams.title}</h3>
+          {diagramCards.title && (
+            <h3>{diagramCards.title}</h3>
+          )}
+          {diagramCards.image && (
             <img 
-              src={diagrams.image}  
+              src={diagramCards.image}  
               className='grid-img'
             />
-            {/* <h3>{diagrams.title}</h3>
-                <p>{diagrams.content1}</p>
-                <p>{diagrams.content2}</p> */}
+          )}
         </div>
-          ))}
+      ))}
+      </div>
     </div>
-    </>
     )
 }

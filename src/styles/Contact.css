@@ -10,7 +10,7 @@
 .contact-page .page-layout {
   /* border: solid 3px rgb(166, 45, 193); */
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 60% 40%;
   /* gap: 3rem; */
   background-color: var(--bg-light);
   color: var(--bg-dark);
@@ -26,7 +26,7 @@
   /* border: solid 3px pink; */
   /* align-self: center; */
   padding: 1rem 6rem;
-  font-size: clamp(1.5rem, 1vw, 2rem);
+  font-size: 1.2rem;
 }
 
 .contact-page .page-title {
@@ -39,7 +39,7 @@
 
 .contact-page .page-subtitle {
     color: var(--bg-dark);
-    font-size: 2.3rem;
+    font-size: 1.4rem;
     padding: 2rem 0 1rem 0;
 }
 
@@ -65,7 +65,7 @@
     /* border: solid 5px orange; */
     display: flex;
     justify-self: center;
-  margin: 25% 25% 0 0;
+  margin: 25% 25%;
 }
 
 .form-container {
@@ -77,8 +77,8 @@
 }
 
 .form {
-  /* border: solid 5px red; */
-    background-color: var(--bg-dark);
+  border: solid 5px  var(--bg-dark);
+    background-color: var(--color-primary);
     color: var(--bg-dark); 
     /* margin-top:2rem ; 
     margin-left: 2rem;  */
@@ -90,7 +90,8 @@
 
 .form-case {
     background-color: var(--bg-light);
-    border: solid 1px var(--color-bg);
+    border: solid 2px var(--bg-dark);
+    color: var(--bg-dark);
     border-radius: var(--radius);
     margin-top:2rem ; 
     margin-left: 2rem; 
@@ -100,9 +101,9 @@
 }
 
 .submit-btn {
-    background-color: var(--bg-light);
-    border: solid 1px var(--color-bg);
-    color: var(--bg-dark); 
+    background-color: var(--bg-dark);
+    border: solid 2px var(--bg-dark);
+    color: white; 
     border-radius: var(--radius);
     margin-top:2rem ; 
     margin-left: 25%; 
@@ -113,10 +114,22 @@
 
 /* Responsive  mobile */
 @media (max-width: 768px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+    /* padding: 3rem 1rem; */
+  }
 
+  /* .about-home,
+  .projects-preview,
+  .about-preview,
+  .contact-preview {
+    padding: 3rem 1rem;
+  } */
 }
 
 /* Responsive tablette */
 @media (max-width: 992px) {
-
+  .page-layout {
+    flex-direction: column;
+  }
 }

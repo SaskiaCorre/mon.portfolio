@@ -38,6 +38,7 @@ export default function Contact() {
         {/* <aside className='left-sidebar'>
           <LeftSidebar sidebar={contactPage.sidebar}/>
         </aside> */}
+        
 
         <MainContent
           title={contactPage.title}

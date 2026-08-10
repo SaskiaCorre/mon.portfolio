@@ -1,22 +1,39 @@
 import PAGES from "../data/projectsData";
 
-export default function Feature({projectsData}){
+export default function Feature({feature, featureCards}){
     return (
     <>
+    <div className="feature">
+        {feature.title && (
+            <h2 className="section-title">
+                {feature.title}
+            </h2>
+        )}
+        {feature.content && (   
+            <p className="section-description">
+                {feature.content}
+            </p>
+        )}
+
+
     <div className="features-grid">
-    {projectsData.map((features) => {
-      const Icon = features.icon;
+    {featureCards.map((featureCards) => {
+      const Icon = featureCards.icon;
 
       return (
         <div
-          key={features.title}
-          className="feature-item"
+          key={featureCards.title}
+          className="feature-card"
         >
           <Icon className="feature-icon" />
-          <h3>{features.title}</h3>
+          {featureCards.title && (
+            <h3>{featureCards.title}</h3>
+        )}
+          
         </div>
       );
     })}
+    </div>
     </div>
     </>
     )

@@ -36,38 +36,35 @@ export default function ProjectDetails({project}){
     return(
     <article className='details-page'> 
     <h2 className='hero-subtitle'>{projectDetails.hero.subtitle}</h2>
-    
-      <Hero
-        // subtitle={projectDetails.hero.subtitle} 
-        badges={projectDetails.hero.badges}
-        title={projectDetails.hero.title}
-        content={projectDetails.hero.content}
-        cta={projectDetails.hero.cta}
-        image={<img src={projectDetails.hero.image} alt="" />}
+    <Hero
+      // subtitle={projectDetails.hero.subtitle} 
+      badges={projectDetails.hero.badges}
+      title={projectDetails.hero.title}
+      content={projectDetails.hero.content}
+      cta={projectDetails.hero.cta}
+      image={<img src={projectDetails.hero.image} alt="" />}
+    />
+
+    <section className='project-details'>
+      <Context
+        context={projectDetails.context}
+        contextCards={projectDetails.contextCards}
       />
 
-      <section className='context'>
-        <h2 className='section-title'>{projectDetails.contextTitle}</h2>
-        <p className='section-content'>{projectDetails.fullDescription}</p>
-        <Context
-          projectsData={projectDetails.contextItems}
-        />
-      </section>
-
-      <section className='objectives'>
-        <h2 className='section-title'>{projectDetails.objectiveTitle}</h2>
-          <Objective projectsData={projectDetails.objectives} />
-      </section>
-
-      <section className='approach'>
-        <h2 className='section-title'>{projectDetails.approachTitle}</h2>
-          <Approach projectsData={projectDetails.approaches} />
-      </section>
+      <Objective 
+        objective={projectDetails.objective} 
+        objectiveCards={projectDetails.objectiveCards}
+      />
       
-      <section className='feature'>
-        <h2 className='section-title'>{projectDetails.featureTitle}</h2>
-          <Feature projectsData={projectDetails.features}/>
-      </section>
+      <Approach 
+        approach={projectDetails.approach} 
+        approachCards={projectDetails.approachCards}
+      />
+      
+      <Feature 
+        feature={projectDetails.feature} 
+        featureCards={projectDetails.featureCards}
+      />
 
       {/* <h4><em>Ce que ce projet m'a apporté</em></h4>
         <ul>
@@ -79,37 +76,36 @@ export default function ProjectDetails({project}){
           ))}
         </ul> */}
       
-      {/* Diagramme UML */}
-      <section className='diagram'>
-        <h2 className='section-title'>{projectDetails.diagramTitle}</h2>
-        <Diagram projectsData={projectDetails.diagrams} />
-      </section>
+      <Diagram 
+        diagram={projectDetails.diagram} 
+        diagramCards={projectDetails.diagramCards}
+      />
 
-      <section className='model'>
-        <h2 className='section-title'>{projectDetails.modelTitle}</h2>
-        <Model projectsData={projectDetails.models} />
-      </section>
+      <Model 
+        model={projectDetails.model}
+        modelCards={projectDetails.modelCards} 
+      />
 
       {/* <h4><em>GitHub:</em></h4>
       <h4><em>Démo:</em></h4>
       <h4><em>Compétences acquises:</em></h4>
       <p></p> */}
-          
-      <section className="gallery">
-        <h2 className='section-title'>{projectDetails.galleryTitle}</h2>
-        <Gallery projectsData={projectDetails.gallery} />
-      </section>
+      
+      <Gallery 
+        gallerySection={projectDetails.gallerySection} 
+        gallery={projectDetails.gallery}
+      />
+    </section>
 
       <button className='git-btn'>
         <Link 
           to={projectDetails.github}
           className='git-link'  
         >
-          Voir le Repository
+         <p> Voir le Repository </ p>
           <Icon className='git-icon' />
         </Link>
       </button>
-
     </article>
     )
 }

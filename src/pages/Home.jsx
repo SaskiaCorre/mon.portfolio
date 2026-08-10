@@ -38,8 +38,8 @@ export default function Home() {
   return (
     <article className="home-page">
       <Hero
-        title={homePage.hero.title}
         subtitle={homePage.hero.subtitle}
+        title={homePage.hero.title}
         content={homePage.hero.content}
         cta={
           <Link 

@@ -1,4 +1,15 @@
-export default function Hero({subtitle, badges, title, content, image, cta, github, gitIcon}){
+export default function Hero(
+  {
+    subtitle, 
+    badges, 
+    title, 
+    content, 
+    image, 
+    cta, 
+    github, 
+    gitIcon
+  }
+){
   return (
     <>
       <section className="hero-layout">

@@ -33,40 +33,19 @@ export default function Projects({project, previewImages}) {
   return (
     <article className='projects-page'>
       <Hero
-              title={projectsPage.hero.title}
-              subtitle={projectsPage.hero.subtitle}
-              content={projectsPage.hero.content}
-              cta={
-                <Link 
-                  to={projectsPage.hero.github}
-                  className='link'
-                >
-                  {projectsPage.hero.cta}
-                </Link>
-              }
-              image={<img src={projectsPage.hero.image} alt="" />}
-            /> 
-      {/* <section className='page-projects'>
-
-        <section className='page-layout'>                    
-          <aside className='left-sidebar'>
-            <LeftSidebar sidebar={projectsPage.sidebar}/>
-          </aside> */}
-          
-          {/* <MainContent
-            title={projectsPage.title}
-            subtitle={projectsPage.subtitle}
-            firstcontent={projectsPage.firstcontent}
-            secondcontent={projectsPage.secondcontent}
-            cta={projectsPage.cta}
-          />  */}
-          
-          {/* <aside className='right-sidebar'>
-            <RightSidebar image={
-              <img src={projectsPage.mainImage} alt=""/>
-            } />
-          </aside>        
-        </section> */}
+        title={projectsPage.hero.title}
+        subtitle={projectsPage.hero.subtitle}
+        content={projectsPage.hero.content}
+        cta={
+          <Link 
+            to={projectsPage.hero.github}
+            className='link'
+          >
+            {projectsPage.hero.cta}
+          </Link>
+        }
+        image={<img src={projectsPage.hero.image} alt="" />}
+      /> 
         {/* APERÇU DES PROJETS */}
         <section>
           {PROJECTS.map((project) => (

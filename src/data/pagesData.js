@@ -10,8 +10,8 @@ import { FaGithub } from "react-icons/fa";
 const PAGES = {
   home: {
     hero: {
+      subtitle: "Saskia Perriot-Magnanou",
       title: "Développeuse UX & Data",
-
       // content: "Je conçois des applications pensées pour l'utilisateur, appuyées par l'analyse de données et une logique métier concrète.",
       content: "Issue de 15 ans d'expérience terrain dans le commerce de tourisme, je conçois des applications centrées utilisateur grâce à une approche qui combine expérience client, communication et développement web.",
 

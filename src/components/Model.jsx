@@ -3,26 +3,61 @@ import { Link } from 'react-router-dom';
 import PROJECTS from '../data/projectsData';
 
 // Arborescence du retour : img, title, shortStack, shortDescription
-export default function Model({ projectsData }){
+export default function Model({ model, modelCards }){
+
+    if (
+        !model.title && !model.content && 
+        !modelCards.title && !modelCards.content && 
+        !modelCards.image && !modelCards.content2 && !modelCards.figma) {
+        return null;
+    }
     return (
-    <div className='model-grid'>
-        {projectsData.map((models) => (
-            <div key={models.title}
-                 className='model-item'
-            >
-              <h3>{models.title}</h3>
-                <p>{models.content}</p>
-                <img src={models.image} className='card-img'/>     
-                <p>{models.content2}</p>       
-                  <button className='cta-btn'>
-                    <Link to={models.figma}
-                          className='link-to'
-                    >
-                      Voir la maquette
-                      </Link>
-                  </button>
-            </div>
-          ))}
-        </div>   
+     <div className="model">
+        {model.title && (
+            <h2 className="section-title">
+                {model.title}
+            </h2>
+        )}
+        {model.content && (   
+            <p className="section-description">
+                {model.content}
+            </p>
+        )}
+
+        <div className='model-grid'>
+            {modelCards.map((modelCards) => (
+                <div key={modelCards.title}
+                    className='model-card'
+                >
+                    {modelCards.title && (
+                        <h3>{modelCards.title}</h3>
+                    )}
+                    {modelCards.content &&(
+                        <p>{modelCards.content}</p>
+                    )}
+                    {modelCards.image && (
+                        <img 
+                            src={modelCards.image} 
+                            className='card-img'
+                        />
+                    )}
+                    {modelCards.content2 &&(    
+                        <p>{modelCards.content2}</p>
+                    )}
+                    {modelCards.figma && (      
+                      <button className='cta-btn'>
+                        <Link 
+                            to={modelCards.figma}
+                            className='link-to'
+                        >
+                          Voir la maquette
+                        </Link>
+                      </button>
+                    )}
+                </div>
+              ))}
+        </div>
+
+      </div>   
     );
 }
