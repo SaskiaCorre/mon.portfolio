@@ -49,7 +49,7 @@ function Root() {
     <main>
       <Outlet />
     </main>
-      <Footer />
+    <Footer />
       
     </>
   )

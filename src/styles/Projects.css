@@ -2,280 +2,212 @@
   width: 100%;
 }
 
-.projects-page .hero {
-  min-height: 40vh;
-}
-
-.projects-page .hero-title {
-  font-size: 3rem;
-}
-
 /* HERO */
-/* LAYOUT TAILLE IDEALE : */
 .projects-page .hero-layout {
-    /* border: solid 3px green; */
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 5rem;
-    background-color: var(--bg-light);
-    color: var(--color-bg);
-    min-height: 70vh;
-    padding: 6rem 8%;
-    align-items: center;
-    /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: 60vh;
+  padding: 1rem 8%;
+  background-color: var(--bg-light);
+  color: var(--color-bg);  
+}
+
+.projects-page .hero-subtitle {
+  font-size: 2.2rem;
+  /* color: var(--bg-dark); */
+  padding: 3rem 3rem 0;
 }
 
 .projects-page .hero-content {
-  flex: 1;
-  justify-items: center;
   max-width: 700px;
-    /* align-items: center; */
-    /* text-align: center; */
+  margin: 0 auto;
+  text-align: center;
 }
 
 .projects-page .hero-title {
+  margin-bottom: 4rem;
   color: var(--bg-dark);
-  /* font-size: 4rem;
-  margin-bottom: 1rem; */
-  /* font-size: clamp(3rem, 6vw, 5rem); */
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1.1;
-  font-weight: 700;
 }
 
-/* .hero-subtitle {
-    font-size: var(--font-subtitle);
-    line-height: 1.5rem;
-} */
-
 .projects-page .hero-text {
-  font-size: clamp(1.5rem, 1vw, 2rem);
-  line-height: 1.6;
   max-width: 600px;
-  padding: 2rem;
+  margin: 0 auto 1.5rem;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
 }
 
 .projects-page .hero-cta {
   border: solid 2px var(--bg-dark);
-    padding: 2rem;
-    background-color: var(--bg-dark);
-    /* color: white;  */
-    border-radius: var(--radius);
-    margin-top:2rem ; 
-    /* padding:15px;  */
-    width: 30%;
-    margin-left: 15rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 50px;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--bg-dark);
+  border-radius: var(--radius);  
 }
 
-/* .projects-page .page-cta {
-  border: solid 2px var(--bg-dark);
-    padding: 2rem;
-    background-color: var(--bg-dark);
-    border-radius: var(--radius);
-    margin-top:2rem ; 
-    width: 30%;
-    margin-left: 15rem;
-} */
+.projects-page .hero-cta .link {
+  color: white;
+  text-decoration: none;
+}
 
-.projects-page .hero-image img{
-    /* border: solid 5px rgb(191, 45, 167); */
-  flex: 1;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  position: center;
+.projects-page .hero-image {
+  display: flex;
+  justify-content: center;
 } 
 
-/* Responsive tablette Hero*/
-@media (max-width: 992px) {
-  .hero-layout {
-    flex-direction: column;
-    text-align: center;
-  }
+.projects-page .hero-image img {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
 }
 
-/* Responsive  mobile Hero*/
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-    /* padding: 2rem 1rem; */
-  }
-  .hero-layout {
-    padding: 4rem 1.5rem;
-  }
+
+/* LISTE DES PROJETS */
+.projects-page > section:not(.hero-layout) {
+  width: min(1200px, 92%);
+  margin: 0 auto;
 }
 
 .one-project {
-  width: 90%;
-  font-size: clamp(1.5rem, 1vw, 2rem);
-  padding: 20px;
-  margin: 20px auto;
+  width: 100%;
+  margin: 4rem auto;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 20px;
-  /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-  /* box-shadow: 0px 10px 30px var(--bg-dark, 0.8); */
   text-align: center;
-  background-color: #f9f9f9; 
 }
 
 .one-project-title {
+  margin-bottom: 1rem;
   color: var(--bg-dark);
-  justify-self: center;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
 }
 
-.projects-preview {
-  /* border: solid 3px rgb(218, 54, 54); */
-  /* max-width: 1200px; */
-/* margin: 0 auto;
-padding: 0 1rem; */
+.one-project-cta {
+  max-width: 800px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.project-preview {
   display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
-  justify-content: center;
-  background-color: var(--bg-light);
-  color: var(--color-bg);
-  grid-column: 2;
-  min-height: 70vh;
-  padding: 5rem 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  align-items: start;
+  margin: 0 auto 2.5rem;
+}
+
+.project-preview a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
 }
 
 .grid-card {
- max-width: 300px;  
-}
-
-
-/* .project-details {
-  padding: 3rem;
-}
-
-.project-details .details-title {
-  color: var(--bg-dark);
-}
-
-.project-details .details-badges {
-  padding: 2rem;
-} */
-/* .one-project {} */
-
-
-
-
-/* .page-layout {
-    border: solid 3px rgb(166, 45, 193);
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 3rem;
-    background-color: var(--bg-light);
-    color: var(--bg-dark);
-    min-height: 35vh;
-    padding: 3rem 2rem;
-    place-content: center;
-    place-items: center;
-}
-
-.left-sidebar {
-  border: solid 5px rgb(32, 30, 30); 
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: 280px;
+  margin: 0 auto;
   padding: 1rem;
-  
-    text-align: center;
-    align-self: center;
-    border-right: 1px solid rgb(9, 78, 9); 
+  object-fit: contain;
+  background-color: white;
+  border: 1px solid #dce8dc;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.badge {
-  margin-right: 1rem;
-  background-color: var(--bg-dark);
-  color:white;
+/* SURVOL SOURIS */
+.project-preview a:hover .grid-card {
+  transform: translateY(-5px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
 }
 
-h3 {
-  color: var(--bg-dark);
-}
-
-.page-subtitle {
-    color: var(--bg-dark);
-    font-size: var(--font-subtitle);
-    padding: 2rem 0 1rem 0;
-}
-
-.page-list {
-  border: solid 3px green;
-  color: black;
-  margin-left: 15%;
-  justify-items: start;
-}
-
-.project-container {
-    border: solid 5px green;
-    width: 100;
-    padding: 5rem 3rem;
-    justify-items: auto; 
-}
-
-.grid-img {
-    border: solid 1px green;
-    padding: 5rem 3rem;
-    margin-left: 10rem; 
-} */
-
-/* PAGE CONTACT */
-/* .form-layout {
-    border: solid 5px orange;
-    display: flex;
-    justify-self: center;
-
-} */
-
-/* .form-container {
-  border: solid 5px black;
-  justify-content: center;  
-  width: 400px;
-  text-align: left; 
-}
-
-.form {
-    background-color: var(--bg-dark);
-    color: var(--bg-dark); 
-    margin-top:2rem ; 
-    margin-left: 2rem; 
-    padding:15px; 
-    width: 100%;
-    border-radius: var(--radius);
-}
-
-.form-case {
-    background-color: var(--bg-light);
-    color: var(--color-bg); 
-    border-radius: var(--radius);
-    margin-top:2rem ; 
-    margin-left: 2rem; 
-    padding:15px; 
-    display: flex;
-    width: 90%;
-}
-
-.submit-button {
-    background-color: var(--bg-light);
-    color: var(--color-bg); 
-    border-radius: var(--radius);
-    margin-top:2rem ; 
-    margin-left: 2rem; 
-    padding:15px; 
-    width: 50%;
-} */
-
-/* Responsive  mobile */
-@media (max-width: 768px) {
-  .projects-preview {
-    grid-template-columns:1fr;
-    padding: 3rem 1rem;
-  }
-}
-
-/* Responsive tablette */
+/* RESPONSIVE TABLETTE */
 @media (max-width: 992px) {
-  .projects-preview {
-    flex-direction: column;
+    .projects-page .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    min-height: auto;
+    padding: 4rem 6%;
   }
+
+  .projects-page .hero-image {
+    /* order: -1; */
+    display: none;
+  }
+
+  .projects-page .hero-image img {
+    max-width: 450px;
+  }  
+
+  .projects-page .project-preview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .one-project {
+    padding: 2.5rem 1.5rem;
+    justify-items: center;
+  }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .projects-page .hero-layout {
+    padding: 3rem 1.25rem;
+  }
+
+  .projects-page .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-page .hero-text {
+    font-size: 1rem;
+  }
+
+  .projects-page .hero-image img {
+    max-width: 100%;
+  }
+
+  .one-project {
+    width: 92%;
+    margin: 2.5rem auto;
+    padding: 2rem 1rem;
+    border-radius: 14px;
+  }
+
+  .one-project-title {
+    font-size: 1.5rem;
+  }
+
+  .one-project-cta {
+    font-size: 1rem;
+  }
+
+  .projects-page .project-preview {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .grid-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+}
 }

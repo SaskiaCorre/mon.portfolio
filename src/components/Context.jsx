@@ -8,14 +8,19 @@ export default function Context({context, contextCards}){
                 {context.title}
             </h2>
         )}
-        {context.category && (   
-            <p className="section-category">
-                {context.category}
+        {context.type && (   
+            <p className="section-type">
+                {context.type}
             </p>
         )}
         {context.content && (   
             <p className="section-description">
                 {context.content}
+            </p>
+        )}
+        {context.secondContent && (   
+            <p className="section-description">
+                {context.secondContent}
             </p>
         )}
 

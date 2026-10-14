@@ -40,6 +40,7 @@ export default function Home() {
       <Hero
         subtitle={homePage.hero.subtitle}
         title={homePage.hero.title}
+        badges={homePage.hero.badges}
         content={homePage.hero.content}
         cta={
           <Link 
@@ -51,14 +52,26 @@ export default function Home() {
         image={<img src={homePage.hero.image} alt="" />}
       /> 
 
-      <MainContent title={homePage.title} />
-        <section className='experience-preview'>
-          <CardXp pagesData={homePage.experiences}/>
-        </section>
+      <MainContent 
+        title={homePage.title}
+        firstcontent={homePage.firstcontent}
+        secondcontent={homePage.secondcontent}
+      />
+      <CardXp pagesData={homePage.experiences}/>
 
       <MainContent title="Mes derniers projets" /> 
         <section className='projects-preview'>
           <Card projects={projectHero}/>
+          <MainContent
+            cta={
+              <Link 
+                to={goToProjects.link}
+                className='link'
+              >
+                {goToProjects.cta}
+              </Link>
+            }
+          /> 
         </section>
 
       <section className="about-preview">
@@ -71,9 +84,6 @@ export default function Home() {
         <MainContent
           titlebis={aboutPreview.titlebis}
           firstcontent={aboutPreview.content}
-          // img={
-          //   <img src={aboutPreview.image} alt="" />
-          // }
           cta={
             <Link 
               to={aboutPreview.link}

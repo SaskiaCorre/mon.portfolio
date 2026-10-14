@@ -12,6 +12,13 @@
 
 ![License](https://img.shields.io/badge/License-MIT-green)
 
+<!-- ![Accueil](./src/assets/screenshots/archiPortfolio.png)
+![Accueil](./src/assets/screenshots/accueilPortfolio.png)
+![Accueil](./src/assets/screenshots/detailsPortfolio.png)
+![Accueil](./src/assets/screenshots/responsivePortfolio.png) -->
+
+![Uploading](./src/assets/gif/accueilPortfolio.gif)
+
 <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
   <h1 align="center">
     <span>&#128188;</span> Portfolio React <br />
@@ -64,11 +71,7 @@
           <li>StarUml (diagrammes UML)</li>
         </ul>
 
-<p align="center">
-<img src="../src/assets/screenshots/architecture.png" width="900">
-</p>
-
-  <h2><span>&#128194;</span>Technologies utilisées</h2>
+  <h2><span>&#128194;</span>Architecture</h2>
     src/ <br />
     │ <br />
     ├── assets/ <br />
@@ -78,13 +81,14 @@
     │   ├── Footer <br />
     │   ├── MainContent <br />
     │   ├── ProjectPreview <br />
-    │   ├── Gallery <br />
-    │   ├── Feature <br />
     │   ├── Context <br />
     │   ├── Objectives <br />
     │   ├── Approach <br />
+    │   ├── Feature <br />
+    │   ├── McdMld <br />
     │   ├── Diagram <br />
-    │   └── Model <br />
+    │   ├── Model <br />
+    │   └── Gallery <br />
     │ <br />
     ├── data/ <br />
     │   ├── pagesData.js <br />
@@ -92,10 +96,10 @@
     │ <br />
     ├── pages/ <br />
     │   ├── HomePage <br />
-    │   ├── AboutPage <br />
     │   ├── ProjectsPage <br />
-    │   ├── ContactPage <br />
     │   ├── ProjectDetailsPage <br />
+    │   ├── AboutPage <br />
+    │   ├── ContactPage <br />
     │   └── ErrorPage <br />
     │ <br />
     └── App.jsx <br />
@@ -133,7 +137,7 @@
           <li>Mobile</li>
         </ul>
 
-  <h2><span>&#128248;</span>Quelques fonctionnalités</h2>
+  <h2><span>&#128223;</span>Quelques fonctionnalités</h2>
     <ul>
       <li>Navigation via React Router</li>
       <li>Hero dynamique</li>
@@ -144,6 +148,10 @@
       <li>Icônes React Icons</li>
       <li>Composants entièrement réutilisables</li>
     </ul>
+
+  <h2><span>&#128248;</span>Apperçu</h2>
+  <p>Page d'accueil</p>
+    <img src="./src/assets/gif/accueilPortfolio.gif" width="900">
 
   <h2><span>&#128260;</span>Perspectives d'évolution</h2>
     <p>Plusieurs améliorations sont prévues :</p>

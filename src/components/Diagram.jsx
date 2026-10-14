@@ -1,11 +1,9 @@
-import PAGES from "../data/projectsData";
+import { useState } from 'react';
 
 export default function Diagram({diagram, diagramCards}){
-  if (
-    !diagram.title && !diagram.content && 
-    !diagramCards.title && !diagramCards.image) {
-      return null;
-  }
+  
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
     <div className="diagram">
       {diagram.title && (
@@ -28,15 +26,53 @@ export default function Diagram({diagram, diagramCards}){
           {diagramCards.title && (
             <h3>{diagramCards.title}</h3>
           )}
+          {diagramCards.content && (
+            <p>{diagramCards.content}</p>
+          )}
           {diagramCards.image && (
-            <img 
-              src={diagramCards.image}  
-              className='grid-img'
+            <img
+              key={diagramCards.title} 
+              src={diagramCards.image}
+              alt={diagramCards.title}  
+              className='diagram-img'
+              onClick={() => setSelectedImage(diagramCards)}
             />
           )}
         </div>
       ))}
       </div>
+
+      {selectedImage && (
+        <div
+          className="lightbox"
+          onClick={() => setSelectedImage(null)}
+        >
+
+          <div
+            className="lightbox-content"
+            onClick={(event) => event.stopPropagation()}
+          >
+
+            <button
+              className="lightbox-close"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Fermer"
+            >
+              {/* × */}
+             <span>&#9949;</span> 
+            </button>
+
+            <img
+              src={selectedImage.image}
+              alt={selectedImage.title}
+            />
+
+            <p>{selectedImage.title}</p>
+
+          </div>
+
+        </div>
+      )}
     </div>
     )
 }

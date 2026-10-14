@@ -1,9 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import PROJECTS from '../data/projectsData';
+import { useState } from 'react';
 
-// Arborescence du retour : img, title, shortStack, shortDescription
 export default function Gallery({ gallerySection, gallery }){
+  const [selectedImage, setSelectedImage] = useState(null);
+
     return (
     <div className="gallery">
       {gallerySection.title && (
@@ -24,22 +23,60 @@ export default function Gallery({ gallerySection, gallery }){
             className="gallery-card"
           >
             <figcaption>
-              <h3>{gallery.title}</h3> 
-              {gallery.content && (
-                <p className='img-description'>{gallery.content}</p>
+              {gallery.title && (
+                <h3 className='gallery-title'>
+                  {gallery.title}
+                </h3>
               )}
             </figcaption>
             
             <img
+              key={gallery.title}
               src={gallery.image}
               alt={gallery.title}
               className='details-img'
+              onClick={() => setSelectedImage(gallery)}
             /> 
+            {gallery.content && (
+                <p className='img-description'>
+                  {gallery.content}
+                </p>
+              )}
                         
           </figure>
         ))}
       </div>
 
+       {selectedImage && (
+        <div
+          className="lightbox"
+          onClick={() => setSelectedImage(null)}
+        >
+
+          <div
+            className="lightbox-content"
+            onClick={(event) => event.stopPropagation()}
+          >
+
+            <button
+              className="lightbox-close"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Fermer"
+            >
+              ×
+            </button>
+
+            <img
+              src={selectedImage.image}
+              alt={selectedImage.title}
+            />
+
+            <p>{selectedImage.title}</p>
+
+          </div>
+
+        </div>
+      )}
     </div>   
   );
 }

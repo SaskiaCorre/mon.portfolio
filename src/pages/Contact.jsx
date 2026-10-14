@@ -1,7 +1,4 @@
-import '../styles/Contact.css'
-import LeftSidebar from '../components/LeftSidebar';
-import RightSidebar from '../components/RightSidebar';
-import React from 'react';
+import '../styles/Contact.css';
 import { useState } from "react";
 import PAGES from '../data/pagesData';
 import MainContent from '../components/MainContent';
@@ -34,12 +31,6 @@ export default function Contact() {
   return (
     <article className='contact-page'>     
       <section className='page-layout'>
-
-        {/* <aside className='left-sidebar'>
-          <LeftSidebar sidebar={contactPage.sidebar}/>
-        </aside> */}
-        
-
         <MainContent
           title={contactPage.title}
           subtitle={contactPage.subtitle}
@@ -47,66 +38,62 @@ export default function Contact() {
           firstcontent={contactPage.firstcontent}
           secondcontent={contactPage.secondcontent}
         />
-
-        {/* <aside className='right-sidebar'>          
-          <RightSidebar 
-            image={
-              <img src={contactPage.mainImage} alt="" />
-            } 
-          />
-        </aside> */}
           
-      <section className='form-layout'>
-        <div className='form-container'>
+        <div className='form-layout'>
+          <div className='form-container'>
 
-          <form className='form' onSubmit={handleSubmit}>
-            <input 
-              className='form-case'
-              type="text"
-              name="name"
-              value={values.name}
-              onChange={handleChange}
-              placeholder='Nom'
-              required
-            />
+            <form className='form' onSubmit={handleSubmit}>
+              <label htmlFor="name">Nom</label>
+                <input 
+                  className='form-case'
+                  type="text"
+                  name="name"
+                  value={values.name}
+                  onChange={handleChange}
+                  placeholder='Vos nom et prénom'
+                  required
+                />
 
-            <input
-              className='form-case'
-              type="email"
-              name="email"
-              value={values.email}
-              onChange={handleChange}
-              placeholder='Email'
-              required
-            />
+              <label htmlFor="name">Mail</label>
+                <input
+                  className='form-case'
+                  type="email"
+                  name="email"
+                  value={values.email}
+                  onChange={handleChange}
+                  placeholder='Votre adresse mail'
+                  required
+                />
 
-            <input
-              className='form-case'
-              type="text"
-              name="phone"
-              value={values.phone}
-              onChange={handleChange}
-              placeholder='N° de téléphone'              
-            />
+              <label htmlFor="name">Téléphone</label>
+                <input
+                  className='form-case'
+                  type="text"
+                  name="phone"
+                  value={values.phone}
+                  onChange={handleChange}
+                  placeholder='Votre numéro de téléphone'              
+                />
 
-            <textarea
-              className='form-case'
-              type="text"
-              name="message"
-              value={values.message}
-              onChange={handleChange}
-              placeholder="Message"
-              required
-            />
+              <label htmlFor="name">Message</label>
+                <textarea
+                  className='form-case'
+                  type="text"
+                  name="message"
+                  value={values.message}
+                  onChange={handleChange}
+                  placeholder="Votre message"
+                  required
+                />
 
-            <button className='submit-btn' type="submit">
-              Envoyer
-            </button>
+              <button className='submit-btn' type="submit">
+                Envoyer
+              </button>
 
-          </form>
+            </form>
+          </div>
+            
         </div>
-          
-      </section>
       </section>
     </article>
 

@@ -1,16 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import PROJECTS from '../data/projectsData';
+import { useState } from 'react';
 
-// Arborescence du retour : img, title, shortStack, shortDescription
 export default function Model({ model, modelCards }){
+  
+  const [selectedImage, setSelectedImage] = useState(null);
 
-    if (
-        !model.title && !model.content && 
-        !modelCards.title && !modelCards.content && 
-        !modelCards.image && !modelCards.content2 && !modelCards.figma) {
-        return null;
-    }
     return (
      <div className="model">
         {model.title && (
@@ -32,13 +26,16 @@ export default function Model({ model, modelCards }){
                     {modelCards.title && (
                         <h3>{modelCards.title}</h3>
                     )}
-                    {modelCards.content &&(
-                        <p>{modelCards.content}</p>
+                    {modelCards.content1 &&(
+                        <p>{modelCards.content1}</p>
                     )}
                     {modelCards.image && (
-                        <img 
-                            src={modelCards.image} 
+                        <img
+                            key={modelCards.title} 
+                            src={modelCards.image}
+                            alt={modelCards.title} 
                             className='card-img'
+                            onClick={() => setSelectedImage(modelCards)}
                         />
                     )}
                     {modelCards.content2 &&(    
@@ -57,6 +54,38 @@ export default function Model({ model, modelCards }){
                 </div>
               ))}
         </div>
+        
+        {selectedImage && (
+        <div
+          className="lightbox"
+          onClick={() => setSelectedImage(null)}
+        >
+
+          <div
+            className="lightbox-content"
+            onClick={(event) => event.stopPropagation()}
+          >
+
+            <button
+              className="lightbox-close"
+              onClick={() => setSelectedImage(null)}
+              aria-label="Fermer"
+            >
+              ×
+            </button>
+
+            <img
+              src={selectedImage.image}
+              alt={selectedImage.title}
+            />
+
+            <p>{selectedImage.title}</p>
+
+          </div>
+
+        </div>
+      )}
+
 
       </div>   
     );
